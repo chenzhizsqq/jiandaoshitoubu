@@ -1,24 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="jiandaoshitoubu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="nSU-4P-5g8" userLabel="PC">
+                                <rect key="frame" x="253" y="60" width="574" height="306"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="574" id="6FH-Fp-ixx"/>
+                                    <constraint firstAttribute="height" constant="306" id="Dfa-SH-4GO"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDu-CY-VeE">
+                                <rect key="frame" x="63" y="476" width="954" height="224"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cV-oO-RnZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="224"/>
+                                        <state key="normal" title="Button" image="3"/>
+                                        <connections>
+                                            <action selector="布的函数:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0x-ch-x9c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpi-2S-yIf">
+                                        <rect key="frame" x="330" y="0.0" width="311" height="224"/>
+                                        <state key="normal" title="Button" image="1"/>
+                                        <connections>
+                                            <action selector="剪刀的函数:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pK1-dn-qwV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1We-g3-dpL">
+                                        <rect key="frame" x="641" y="0.0" width="313" height="224"/>
+                                        <state key="normal" title="Button" image="2"/>
+                                        <connections>
+                                            <action selector="石头的函数:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOe-U2-DuE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nSU-4P-5g8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="253" id="3ye-4N-INq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nSU-4P-5g8" secondAttribute="trailing" constant="253" id="5zi-6w-Hbf"/>
+                            <constraint firstItem="nSU-4P-5g8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="dRU-xH-if0"/>
+                            <constraint firstItem="uDu-CY-VeE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="gei-PP-t4k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uDu-CY-VeE" secondAttribute="bottom" constant="110" id="hwN-dp-aEv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uDu-CY-VeE" secondAttribute="trailing" constant="63" id="jpc-CL-Ag2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="剪刀" destination="mpi-2S-yIf" id="Zgr-m2-Ewp"/>
+                        <outlet property="布" destination="6cV-oO-RnZ" id="wDz-cl-E2Y"/>
+                        <outlet property="电脑选的" destination="nSU-4P-5g8" id="l0x-pi-nGE"/>
+                        <outlet property="石头" destination="1We-g3-dpL" id="hx3-Zg-ioP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-146.11111111111111" y="69.629629629629619"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="257" height="224"/>
+        <image name="2" width="259" height="221"/>
+        <image name="3" width="276" height="222"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
