@@ -26,25 +26,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDu-CY-VeE">
                                 <rect key="frame" x="63" y="476" width="954" height="224"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cV-oO-RnZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="224"/>
-                                        <state key="normal" title="Button" image="3"/>
-                                        <connections>
-                                            <action selector="布的函数:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0x-ch-x9c"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpi-2S-yIf">
-                                        <rect key="frame" x="330" y="0.0" width="311" height="224"/>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cV-oO-RnZ" userLabel="剪刀">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="224"/>
                                         <state key="normal" title="Button" image="1"/>
                                         <connections>
-                                            <action selector="剪刀的函数:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pK1-dn-qwV"/>
+                                            <action selector="剪刀的函数:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0x-ch-x9c"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1We-g3-dpL">
-                                        <rect key="frame" x="641" y="0.0" width="313" height="224"/>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpi-2S-yIf" userLabel="石头">
+                                        <rect key="frame" x="311" y="0.0" width="313" height="224"/>
                                         <state key="normal" title="Button" image="2"/>
                                         <connections>
-                                            <action selector="石头的函数:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOe-U2-DuE"/>
+                                            <action selector="石头的函数:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pK1-dn-qwV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1We-g3-dpL" userLabel="布">
+                                        <rect key="frame" x="624" y="0.0" width="330" height="224"/>
+                                        <state key="normal" title="Button" image="3"/>
+                                        <connections>
+                                            <action selector="布的函数:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOe-U2-DuE"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -62,10 +62,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="剪刀" destination="mpi-2S-yIf" id="Zgr-m2-Ewp"/>
-                        <outlet property="布" destination="6cV-oO-RnZ" id="wDz-cl-E2Y"/>
+                        <outlet property="剪刀" destination="6cV-oO-RnZ" id="wDz-cl-E2Y"/>
+                        <outlet property="布" destination="1We-g3-dpL" id="hx3-Zg-ioP"/>
                         <outlet property="电脑选的" destination="nSU-4P-5g8" id="l0x-pi-nGE"/>
-                        <outlet property="石头" destination="1We-g3-dpL" id="hx3-Zg-ioP"/>
+                        <outlet property="石头" destination="mpi-2S-yIf" id="Zgr-m2-Ewp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     var 现在的电脑选的剪刀石头布 = 1
     
 
-    @IBOutlet weak var 布: UIButton!
     @IBOutlet weak var 剪刀: UIButton!
     @IBOutlet weak var 石头: UIButton!
+    @IBOutlet weak var 布: UIButton!
     @IBOutlet weak var 电脑选的: UIImageView!
     
     var player: AVAudioPlayer?
@@ -32,17 +32,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func 布的函数(_ sender: Any) {
+    @IBAction func 剪刀的函数(_ sender: Any) {
         现在的用户选的剪刀石头布 = 1
         
         
         现在的电脑选的剪刀石头布 = Int.random(in: 1...3)
         
         电脑选的.image = UIImage(named: "\(现在的电脑选的剪刀石头布)")
-        tapBtn("布")
+        tapBtn("剪刀")
     }
     
-    @IBAction func 剪刀的函数(_ sender: Any) {
+    
+    @IBAction func 石头的函数(_ sender: Any) {
         现在的用户选的剪刀石头布 = 2
         
         
@@ -50,17 +51,17 @@ class ViewController: UIViewController {
         
         电脑选的.image = UIImage(named: "\(现在的电脑选的剪刀石头布)")
         
-        tapBtn("剪刀")
+        tapBtn("石头")
     }
     
-    @IBAction func 石头的函数(_ sender: Any) {
+    @IBAction func 布的函数(_ sender: Any) {
         现在的用户选的剪刀石头布 = 3
         
         
         现在的电脑选的剪刀石头布 = Int.random(in: 1...3)
         
         电脑选的.image = UIImage(named: "\(现在的电脑选的剪刀石头布)")
-        tapBtn("石头")
+        tapBtn("布")
     }
 }
 
