@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     var 现在的用户选的剪刀石头布 = 1
@@ -17,6 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var 石头: UIButton!
     @IBOutlet weak var 电脑选的: UIImageView!
     
+    var player: AVAudioPlayer?
+    
+    func tapBtn(_ soundName: String) {
+        if let sound = NSDataAsset(name: soundName) {
+            player = try? AVAudioPlayer(data: sound.data)
+            player?.play() // → これで音が鳴る
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +39,7 @@ class ViewController: UIViewController {
         现在的电脑选的剪刀石头布 = Int.random(in: 1...3)
         
         电脑选的.image = UIImage(named: "\(现在的电脑选的剪刀石头布)")
+        tapBtn("布")
     }
     
     @IBAction func 剪刀的函数(_ sender: Any) {
@@ -39,6 +49,8 @@ class ViewController: UIViewController {
         现在的电脑选的剪刀石头布 = Int.random(in: 1...3)
         
         电脑选的.image = UIImage(named: "\(现在的电脑选的剪刀石头布)")
+        
+        tapBtn("剪刀")
     }
     
     @IBAction func 石头的函数(_ sender: Any) {
@@ -48,6 +60,7 @@ class ViewController: UIViewController {
         现在的电脑选的剪刀石头布 = Int.random(in: 1...3)
         
         电脑选的.image = UIImage(named: "\(现在的电脑选的剪刀石头布)")
+        tapBtn("石头")
     }
 }
 
