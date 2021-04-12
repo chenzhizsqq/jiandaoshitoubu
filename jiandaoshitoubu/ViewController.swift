@@ -37,35 +37,34 @@ class ViewController: UIViewController {
         print("电脑:\(电脑)")
         笑.isHidden = true
         哭.isHidden = true
+        
         剪刀.isHidden = true
         石头.isHidden = true
         布.isHidden = true
         
+        剪刀.alpha = 0
+        石头.alpha = 0
+        布.alpha = 0
+        
         if  玩家 == 1 &&  电脑 == 3{
             笑.isHidden = false
-            剪刀.isHidden = false
         }
         if  玩家 == 2 &&  电脑 == 1{
             笑.isHidden = false
-            石头.isHidden = false
         }
         if  玩家 == 3 &&  电脑 == 2{
             笑.isHidden = false
-            布.isHidden = false
         }
         
         
         if  电脑 == 1 &&  玩家 == 3{
             哭.isHidden = false
-            布.isHidden = false
-            剪刀.isHidden = false
         }
         if  电脑 == 2 &&  玩家 == 1{
             哭.isHidden = false
         }
         if  电脑 == 3 &&  玩家 == 2{
             哭.isHidden = false
-            石头.isHidden = false
         }
         
         if 电脑 == 玩家 {
@@ -73,6 +72,10 @@ class ViewController: UIViewController {
             剪刀.isHidden = false
             石头.isHidden = false
             布.isHidden = false
+            
+            剪刀.alpha = 0
+            石头.alpha = 0
+            布.alpha = 0
         }
         
         剪刀.isHidden = false
@@ -140,12 +143,19 @@ class ViewController: UIViewController {
         funResult(玩家:现在的用户选的剪刀石头布,电脑:现在的电脑选的剪刀石头布)
     }
     @IBAction func 按钮的函数(_ sender: Any) {
+        笑.isHidden = true
+        哭.isHidden = true
         
         剪刀.isHidden = false
         石头.isHidden = false
         布.isHidden = false
         
         电脑选的.isHidden = true
+        
+        
+        剪刀.alpha = 1
+        石头.alpha = 1
+        布.alpha = 1
         
         剪刀.isEnabled = true
         石头.isEnabled = true
